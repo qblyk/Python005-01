@@ -7,7 +7,7 @@ import os,sys,stat
 now_date = time.strftime('%Y%m%d',time.localtime())
 logpath = "/var/log/newdir/python-"+ now_date
 filepath = logpath+"/test.log"
-print(logpath)
+print('>> '+now_date +'目录：'+logpath)
 
 # os.chmod("/var/log/",stat.S_IRWXU+ stat.S_IRWXG + stat.S_IRWXO)
 
@@ -20,15 +20,15 @@ def mkdir(path):
         logfile=path+"/test.log"
         os.makedirs(path)
         # os.chmod(path,stat.S_IRWXU+ stat.S_IRWXG + stat.S_IRWXO)
-        print(path+' 创建成功')
+        print('>> 创建目录：'+path+' 成功')
         # time.sleep(2)
-        print("logfile 路径： "+logfile)
+        print(">> logfile 路径： "+logfile)
         # open(logfile)
         os.mknod(logfile,S_IRWXU)
         # os.chmod(logfile)
         return True 
     else:
-            print(path+' 目录已存在')
+            print('>> 目录: '+path+' 已存在')
             return False
 
 mkpath=logpath
