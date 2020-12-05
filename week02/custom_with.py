@@ -9,5 +9,4 @@ class Open:
     def __call__(self):
         pass
 
-with Open() as f:
-    pass
+with Open 
