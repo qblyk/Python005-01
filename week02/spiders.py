@@ -111,7 +111,7 @@ if __name__ == "__main__":
         crawl_threds.append(thread)
 
     # 将结果保存到一个json文件中
-    with open('book.json','a+',encoding='utf-8') as pipline_f:
+    with open('news.txt','a+',encoding='utf-8') as pipline_f:
 
         # 解析线程
         parse_thread = []
