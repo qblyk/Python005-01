@@ -73,9 +73,8 @@ class ParserThread(threading.Thread):
         try:
             html = etree.HTML(item)
             # print(html)
-            # books = html.xpath('//div[@class="pl2"]')
             newsList = html.xpath('//div[@class="bg_htit"]/h2/a')
-            print(newsList)
+            # print(newsList)
             for news in newsList:
                 try:
                     title = news.xpath('./text()')
@@ -96,7 +95,7 @@ if __name__ == "__main__":
     
     # 定义存放网页的任务队列
     pageQueue = Queue(10)
-    for page in range(0,5):
+    for page in range(0,6):
         pageQueue.put(page)
     
     # 定义存放解析数据的任务队列
